@@ -6,22 +6,43 @@
         max-width: $large-width-container;
         margin: 0 auto;
         width: 95%;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+
+    }
+
+    .block {
+        width: 100%;
+        max-width: 600px;
     }
 
     &-picture {
+        width: 100%;
+        max-width: 500px;
 
+        @media screen and (min-width:$medium-width-container ) {
+            margin-right: auto;
+        }
 
         
 
         &-img {
             width: 100%;
-            max-width: 1000px;
+            max-width: 800px;
             box-shadow: 8px 8px 0 0 #FFC300;
         }
     }
 
     &-header {
         padding: 30px 0;
+        width: 100%;
+        max-width: 500px;
+        height: fit-content;
+
+        
         
         &-text {
             padding-bottom: 20px;
@@ -32,6 +53,8 @@
         font-size: 2rem;
         line-height: 2.8rem;
         font-weight: 700;
+        width: 100%;
+        max-width: 500px;
 
     }
 
@@ -40,6 +63,8 @@
     }
 
     &-faq {
+        max-width: 1000px;
+        margin: 0 auto;
 
         &-block {
 
@@ -52,6 +77,13 @@
 
             .managed-crawling-faq-block-content {
                     display: none;
+
+                    @media screen and (min-width:$medium-width-container ) {
+                            display: block;
+                    }
+
+
+                    
                 }
 
             &-header {
@@ -70,6 +102,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
+                @media screen and (min-width:$medium-width-container ) {
+                    display: none;
+                }
 
             }
         }
