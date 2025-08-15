@@ -62,12 +62,14 @@
         }
 
         &-count {
-            font-weight: 700;
+            font-weight: 600;
             height: 30px;
             width: 30px;
             background-color: $primary-colour;
             text-align: center;
             transform: translate(-10px, 40px);
+            font-size: 1rem;
+            line-height: 1.8rem;
         }
 
         &-header {

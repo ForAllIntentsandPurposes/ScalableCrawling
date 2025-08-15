@@ -58,15 +58,24 @@ h6, .header-6 {
     text-decoration-line: 3px;
     text-decoration-color: $primary-colour;
     text-decoration-skip-ink: auto;
-    text-underline-offset: 8px;
+    text-underline-offset: 4px;
     text-decoration-thickness: 5px;
+}
+.underline-slim {
+    text-decoration: underline;
+    text-decoration-line: 3px;
+    text-decoration-color: $primary-colour;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 3px;
 }
 .underline-grey {
     text-decoration: underline;
     text-decoration-line: 3px;
     text-decoration-color: rgba(204, 204, 204, 1);
     text-decoration-skip-ink: auto;
-    text-underline-offset: 8px;
+    text-decoration-skip: ink;
+    text-underline-offset: 5px;
     text-decoration-thickness: 5px;
 }
 

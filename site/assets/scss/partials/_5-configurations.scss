@@ -25,6 +25,7 @@
         border: 3px solid $secondary-colour;
         padding: 40px 20px;
         margin-right: 30px;
+        cursor: grab;
 
         &-header {
             padding: 15px 5px;
@@ -65,6 +66,7 @@
                 text-align: center;
                 font-size: 2rem;
                 transform: translateX(-15px);
+                cursor: pointer;
             }
 
             &-back {

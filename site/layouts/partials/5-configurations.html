@@ -66,6 +66,21 @@
 <script>
     (
         function(){
+            const deck = document.querySelector(".configurations-deck");
+            const cards = Array.from(document.querySelectorAll(".configurations-card"));
+            const back = document.querySelector(".configurations-controls-mobile-back");
+            const forward = document.querySelector(".configurations-controls-mobile-forward");
+
+            back.addEventListener("click",e=>{
+                const lastCard = Array.from(document.querySelectorAll(".configurations-card")).at(-1);
+                const firstCard = Array.from(document.querySelectorAll(".configurations-card")).at(0);
+                deck.moveBefore(lastCard,firstCard);
+            });
+            forward.addEventListener("click",e=>{
+                const lastCard = Array.from(document.querySelectorAll(".configurations-card")).at(-1);
+                const firstCard = Array.from(document.querySelectorAll(".configurations-card")).at(0);
+                deck.appendChild(firstCard);
+            });
             
         }
     )();
