@@ -21,7 +21,7 @@
   
   
       
-        <link rel="stylesheet" href="/css/main.5fe712e8bc4ed8084b0d2781e6cf364267a949a813f74bd1f68c77870a819034.css" integrity="sha256-X&#43;cS6LxO2AhLDSeB5s82QmepSagT90vR9ox3hwqBkDQ=" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/main.c06dff159f2e50bc3fa7ad02553ebf6536343d6e91f3cd8066e2ffd03811d0ee.css" integrity="sha256-wG3/FZ8uULw/p60CVT6/ZTY0PW6R882AZuL/0DgR0O4=" crossorigin="anonymous">
     
   
 
@@ -39,11 +39,61 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
 
-  
   <div class="root-container">
     <main class="container">
 
       
+
+    <div class="header sticky">
+    <nav class="nav">
+        <div class="logo">
+            <picture>
+                <source media="(max-width:1000px )" srcset="/images/mobile-logo.svg">
+                <source media="(min-width:1000px )" srcset="/images/desktop-logo.svg">
+                <img src="/images/mobile-logo.svg" alt="" class="logo-img">
+            </picture>
+        </div>
+        <ul class="nav-ul hide">
+            <li class="nav-li"><a href="#" class="nav-links">Servers</a></li>
+            <li class="nav-li"><a href="#" class="nav-links">Managed Services</a></li>
+            <li class="nav-li"><a href="#" class="nav-links">Pricing</a></li>
+        </ul>
+        <div class="nav-cta hide">
+            <a href="#" class=" cta cta-primary">Request a Box</a>
+        </div>
+
+        <div class="nav-hamburger">
+            <img src="/images/hamburger.svg" alt="" class="hamburger-hamburger">
+            <img src="/images/hamburger-open.svg" alt="" class="hamburger-hamburger-open hide">
+        </div>
+    </nav>
+</div>
+
+<script>
+    (function(){
+
+        const closedHamburger = document.querySelector(".hamburger-hamburger");
+        const openHamburger = document.querySelector(".hamburger-hamburger-open");
+        const navUl = document.querySelector(".nav-ul");
+        const navCTA = document.querySelector(".nav-cta");
+
+        closedHamburger.addEventListener("click",e=>{
+            closedHamburger.classList.add("hide");
+            openHamburger.classList.remove("hide");
+            navUl.classList.remove("hide");
+            navCTA.classList.remove("hide");
+
+        })
+        openHamburger.addEventListener("click",e=>{
+            closedHamburger.classList.remove("hide");
+            openHamburger.classList.add("hide");
+            navUl.classList.add("hide");
+            navCTA.classList.add("hide");
+        })
+
+        
+    })();
+</script>
     <section class="hero mx-width mrg-center">
     <div class="wrapper">
         <header class="header">

@@ -1,0 +1,62 @@
+.header {
+    position: sticky;
+    background-color: $rich-black;
+    
+
+    .nav {
+        
+        padding: 20px 10px;
+        position: relative;
+        max-width: $large-width-container;
+        margin: 0 auto;
+        width: 95%;
+
+        .logo {
+            margin-bottom: 20px;
+
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        &-ul {
+            background-color: white;
+            padding: 10px 0;
+
+        }
+
+        &-li {
+            display: block;
+            padding: 5px 20px;
+            border-bottom: 1px solid #ccc;
+
+            &:hover, &:focus {
+                background: $primary-colour;
+            }
+        }
+
+        &-links {
+            line-height: 1.5rem;
+            font-size: 1rem;
+        }
+
+        &-cta {
+            padding: 20px 0;
+        }
+
+        &-hamburger {
+            
+        }
+
+        .hamburger-hamburger, .hamburger-hamburger-open {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            height: 32px;
+            width: 32px;
+
+        }
+    }
+}
