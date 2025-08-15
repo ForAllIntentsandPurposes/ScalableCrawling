@@ -24,7 +24,7 @@
     .header {
 
         @media screen and (min-width:$medium-width-container ) {
-            max-width: 700px;
+            max-width: 600px;
         }
 
         &-text {
@@ -50,7 +50,7 @@
 
     .blurb {
         @media screen and (min-width:$medium-width-container ) {
-            max-width: 700px;
+            max-width: 600px;
         }
 
         &-text {
