@@ -13,7 +13,13 @@
             </div>
         </header>
 
-        <form action="" class="contact-form" netlify>
+        <form action="" class="contact-form" netlify netlify-honeypot="bot-field">
+
+            <p class="hide">
+                <label>
+                Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+                </label>
+            </p>
 
             <div class="contact-form-box card">
                 <h3 class="contact-form-box-header">
@@ -80,7 +86,7 @@
                         <textarea name="message" id="message"></textarea>
                         
                     </fieldset>
-                    <div class="gdpr">
+                    <div class="gdpr hide">
                         <input type="checkbox" name="gdpr" id="gdpr">
                         <label type="checkbox" name="gdpr" class="gdpr-label" for="gdpr">GDPR & T&C's Consent</label>
 
