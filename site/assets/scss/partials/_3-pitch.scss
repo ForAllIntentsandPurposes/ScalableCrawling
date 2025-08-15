@@ -44,6 +44,8 @@
 
     &-cards {
 
+        height: 300px;
+
         @media screen and (min-width:$medium-width-container ) {
             max-width: 300px;
         }
@@ -59,7 +61,7 @@
 
         .row-1 {
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
             margin: 0 auto;
 
             

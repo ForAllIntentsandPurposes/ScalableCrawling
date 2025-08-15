@@ -12,7 +12,7 @@
         flex-direction: row;
         justify-content: center;
 
-        @media screen and (min-width:$medium-width-container ) {
+        @media screen and (min-width:$large-width-container ) {
             justify-content: flex-end;
         }
 
@@ -22,17 +22,18 @@
         width: 100%;
         max-width: 800px;
 
-        @media screen and (min-width:$medium-width-container ) {
+        @media screen and (min-width:$large-width-container ) {
             max-width: 600px;
         }
     }
 
     &-picture {
         width: 100%;
-        max-width: 500px;
+        
 
         @media screen and (min-width:$medium-width-container ) {
             margin-right: auto;
+            max-width: 500px;
         }
 
         
