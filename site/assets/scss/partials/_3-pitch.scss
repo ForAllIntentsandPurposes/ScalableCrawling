@@ -48,6 +48,10 @@
             max-width: 300px;
         }
 
+        &:hover {
+            transform: scale(1.1);
+        }
+
         .row {
 
             
@@ -93,6 +97,8 @@
         background-color: $grey;
         display: flex;
         flex-wrap: wrap;
+
+        
         
 
         &-header {
@@ -116,6 +122,10 @@
             @media screen and (min-width:$medium-width-container ) {
                 padding: 40px;
             }
+
+            &:hover {
+            transform: scale(1.1);
+        }
 
             &-header {
                 display: flex;
