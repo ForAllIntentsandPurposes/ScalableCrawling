@@ -1,0 +1,72 @@
+<section class="configurations">
+    <header class="configurations-header">
+        <h2 class="configurations-header-text header-4">Configurations</h2>
+    </header>
+    <div class="configurations-deck">
+        {{ range $.Params.configurations }}
+        <div class="configurations-card">
+
+            <div class="configurations-card-header">
+                <div class="configurations-card-header-text strong">{{ .colour }}</div>
+            </div>
+
+            <div class="configurations-card-list">
+                <div class="configurations-card-list-property-tab">
+                    <div class="configurations-card-list-property-tab-properties">
+                        <div class="line">
+                            <div class="property strong fc-secondary">Memory</div>
+                            <div class="value fc-secondary">{{ .Memory }}</div>
+                        </div>
+                        <div class="line">
+                            <div class="property strong fc-secondary">Processing Cores</div>
+                            <div class="value fc-secondary">{{ .Cores }}</div>
+                        </div>
+                        <div class="line">
+                            <div class="property strong fc-secondary">Storage</div>
+                            <div class="value fc-secondary">200GB</div>
+                        </div>
+                        <div class="line">
+                            <div class="property strong fc-secondary">Cloud Storage</div>
+                            <div class="value fc-secondary">1TB</div>
+                        </div>
+                    </div>
+                    <div class="blurb fc-secondary">Capable of crawling up to 5 domains concurrently</div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div class="configurations-controls">
+        <div class="configurations-controls-mobile">
+            <div class="configurations-controls-mobile-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" transform="matrix(0 1 -1 0 32 0)" fill="#FFC300" />
+                    <rect x="28" y="4" width="24" height="24" rx="12" transform="rotate(90 28 4)" fill="#FFC300" />
+                    <path d="M19 7L14 16L19 25H13L7 16L13 7H19Z" fill="#000814" />
+                    <rect x="9" y="13" width="16" height="6" fill="#000814" />
+                </svg>
+            </div>
+            <div class="configurations-controls-mobile-forward"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" transform="matrix(0 -1 1 0 0 32)" fill="#FFC300" />
+                    <rect x="4" y="28" width="24" height="24" rx="12" transform="rotate(-90 4 28)" fill="#FFC300" />
+                    <path d="M13 25L18 16L13 7H19L25 16L19 25H13Z" fill="#000814" />
+                    <rect x="23" y="19" width="16" height="6" transform="rotate(180 23 19)" fill="#000814" />
+                </svg></div>
+        </div>
+        <div class="configurations-controls-desktop">
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    (
+        function(){
+            
+        }
+    )();
+</script>

@@ -1,0 +1,119 @@
+<section class="about-us" id="aboutUs">
+    <div class="wrapper">
+        <header class="about-us-header">
+            <h2 class="about-us-header-text">Who Works at Scalable Crawling</h2>
+            <div class="about-us-header-blurb">The team behind Scalable Crawling</div>
+        </header>
+
+        <div class="about-us-deck">
+            <article class="about-us-cards">
+                <div class="about-us-profile-image">
+                    <img src="https://placehold.co/200x200" alt="" class="about-us-profile-image-img">
+                </div>
+                <div class="about-us-name">
+                    <div class="about-us-name-label">Name:</div>
+                    <div class="about-us-name-text">John Doe</div>
+                </div>
+                <div class="about-us-what-i-do">
+                    <div class="about-us-what-i-do-label">What I Do:</div>
+                    <div class="about-us-what-i-do-text">
+                        Director (Business Development)
+                    </div>
+                </div>
+
+                <div class="about-us-blurb open">
+                    <div class="about-us-blurb-toggle" data-state="closed">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"
+                            class="open-icon">
+                            <rect x="7" y="13.5518" width="18" height="6" fill="#CCCCCC" />
+                            <rect x="13" y="25.5518" width="18" height="6" transform="rotate(-90 13 25.5518)"
+                                fill="#CCCCCC" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"
+                            class="close-icon hide">
+                            <rect x="7" y="13.5518" width="18" height="6" fill="#CCCCCC" />
+
+                        </svg>
+                    </div>
+                    <div class="about-us-blurb-text hide">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas ornare lorem eget
+                        venenatis. Suspendisse sed venenatis odio, molestie pharetra sapien.
+                    </div>
+                </div>
+            </article>
+            <article class="about-us-cards">
+                <div class="about-us-profile-image">
+                    <img src="https://placehold.co/200x200" alt="" class="about-us-profile-image-img">
+                </div>
+                <div class="about-us-name">
+                    <div class="about-us-name-label">Name:</div>
+                    <div class="about-us-name-text">John Doe</div>
+                </div>
+                <div class="about-us-what-i-do">
+                    <div class="about-us-what-i-do-label">What I Do:</div>
+                    <div class="about-us-what-i-do-text">
+                        Director (Business Development)
+                    </div>
+                </div>
+
+                <div class="about-us-blurb open">
+                    <div class="about-us-blurb-toggle" data-state="closed">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"
+                            class="open-icon">
+                            <rect x="7" y="13.5518" width="18" height="6" fill="#CCCCCC" />
+                            <rect x="13" y="25.5518" width="18" height="6" transform="rotate(-90 13 25.5518)"
+                                fill="#CCCCCC" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"
+                            class="close-icon hide">
+                            <rect x="7" y="13.5518" width="18" height="6" fill="#CCCCCC" />
+
+                        </svg>
+                    </div>
+                    <div class="about-us-blurb-text hide">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas ornare lorem eget
+                        venenatis. Suspendisse sed venenatis odio, molestie pharetra sapien.
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    (
+        function () {
+            const cards = Array.from(document.querySelectorAll("#aboutUs .about-us-cards"));
+
+            cards.forEach(card => {
+                card.querySelector(".about-us-blurb-toggle").addEventListener("click", (e) => {
+                    const currentState = e.target.getAttribute("data-state");
+                    console.log(currentState);
+                    /* 
+                        Toggle blurb-toggle
+                    */
+                    e.target.dataset = currentState === "closed" ? e.target.setAttribute("data-state", "open") : e.target.setAttribute("data-state", "closed");
+                    /* 
+                        Toggle SVG
+                    */
+                    if (currentState === "closed") {
+                        card.querySelector(".close-icon").classList.add("hide");
+                        card.querySelector(".open-icon").classList.remove("hide");
+                    } else {
+                        card.querySelector(".close-icon").classList.remove("hide");
+                        card.querySelector(".open-icon").classList.add("hide");
+                    }
+                    /* 
+                        Toggle about us text opened and closed
+                    */
+                    currentState === "closed" ? card.querySelector(".about-us-blurb-text").classList.add("hide") : card.querySelector(".about-us-blurb-text").classList.remove("hide");
+
+                }, false);
+            });
+
+        }
+    )();
+</script>

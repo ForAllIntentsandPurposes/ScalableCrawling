@@ -1,0 +1,92 @@
+#toggleRadio {
+    width: fit-content;
+    display: flex;
+    border: 3px solid $secondary-colour;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 10px auto;
+
+    @media screen and (min-width: $large-width-container) {
+        margin: 10px;
+    }
+
+    .col {
+        padding: 10px 0;
+    }
+
+    .toggle-radio {
+        display: none;
+
+        &:checked + label {
+            background: $primary-colour;
+        }
+    }
+
+    .toggle-label {
+        padding: 10px 30px;
+
+        &:hover {
+            background: $primary-colour;
+        }
+    }
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+
+    &-label {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        padding: 5px 0;
+        font-weight: 600;
+    }
+
+    &-container {
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+        padding: 5px 8px;
+    }
+}
+
+.form-step {
+    .fieldset-group {
+        display: flex;
+        flex-direction: column;
+        border: unset;
+        padding: unset;
+
+        label {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            line-height: 1rem;
+            font-weight: 600;
+            padding: 10px 0;
+        }
+    }
+
+    .gdpr {
+        padding: 10px 0;
+
+        &-label {
+            font-size: 1rem;
+            line-height: 1.2rem;
+        }
+    }
+
+    .enquire-cta {
+        width: fit-content;
+        margin-left: auto;
+
+        &-button {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            padding: 12px 40px;
+        }
+    }
+}

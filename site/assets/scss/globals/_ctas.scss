@@ -1,0 +1,16 @@
+.cta {
+    padding: 12px 22px;
+}
+
+.cta-primary {
+    background: $primary-colour;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    border: unset;
+
+    &:hover {
+        background-color: lighten($primary-colour,20%);
+        border: 1px solid $primary-colour;
+    }
+}

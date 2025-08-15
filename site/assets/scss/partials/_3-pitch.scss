@@ -1,0 +1,136 @@
+.pitch {
+    padding-top: 10px;
+
+    .wrapper {
+        height: 100%;
+        min-height: 300px;
+        max-width: $large-width-container;
+        margin: 0 auto;
+        width: 95%;
+
+        
+    }
+
+    &-header {
+
+        &-text {
+            padding: 30px 0;
+            text-align: center;
+        }
+    }
+
+    &-problems {
+        background-color: $grey;
+        padding: 30px 0;
+
+        @media screen and (min-width:$medium-width-container ) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        &-header {
+            display: block;
+            width: 100%;
+
+
+            &-text {
+                text-align: center;
+                color: $secondary-colour;
+            }
+        }
+    }
+
+    &-cards {
+
+        @media screen and (min-width:$medium-width-container ) {
+            max-width: 300px;
+        }
+
+        .row {
+
+            
+        }
+
+        .row-1 {
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+
+            
+        }
+
+        &-count {
+            font-weight: 700;
+            height: 30px;
+            width: 30px;
+            background-color: $primary-colour;
+            text-align: center;
+            transform: translate(-10px, 40px);
+        }
+
+        &-header {
+            color: $secondary-colour;
+            transform: translate(35px, 12px);
+
+        }
+
+        &-content {
+            background-color: $white;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+    }
+
+    &-solutions {
+        background-color: $grey;
+        display: flex;
+        flex-wrap: wrap;
+        
+
+        &-header {
+            display: block;
+            width: 100%;
+            padding: 20px 0;
+
+            &-text {
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+
+        &-card {
+            width: 90%;
+            max-width: 430px;
+            margin: 0 auto 20px;
+            background-color: white;
+            padding: 20px;
+
+            @media screen and (min-width:$medium-width-container ) {
+                padding: 40px;
+            }
+
+            &-header {
+                display: flex;
+
+                &-icon {
+                    display: inline-block;
+                    height: 30px;
+                    width: 30px;
+                }
+                &-text {
+
+                }
+            }
+
+            &-blurb {
+
+            }
+        }
+    }
+}

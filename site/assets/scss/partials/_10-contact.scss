@@ -1,0 +1,65 @@
+.contact {
+    background-color: #ccc;
+
+    .wrapper {
+        max-width: $large-width-container;
+        margin: 0 auto;
+        width: 90%;
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        @media screen and (min-width: $large-width-container) {
+            display: flex;
+        }
+
+            .left-desktop {
+                display: none;
+
+                @media screen and (min-width: 1400px) {
+                    position: absolute;
+                    left: -130px;
+                    display: inline-block;
+                    height: 100px;
+                    width: 100px;
+                    background-image: url("/images/icons/left-icon.png");
+                }
+            }
+
+            .right-desktop {
+            }
+
+            .mobile {
+            }
+
+        }
+
+        &-header {
+            @media screen and (min-width: $large-width-container) {
+                width: 40%;
+                max-width: 400px;
+                position: sticky;
+                margin-right: auto;
+            }
+            &-text {
+            }
+        }
+
+        &-form {
+            @media screen and (min-width: $large-width-container) {
+                width: 50%;
+            }
+            &-box {
+                &-header {
+                    padding: 10px 0 10px;
+
+                    &-text {
+                    }
+                }
+
+                &-blurb {
+                    padding: 10px 0;
+                }
+            }
+        }
+}

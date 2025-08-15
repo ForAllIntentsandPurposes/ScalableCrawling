@@ -1,0 +1,47 @@
+@import "../globals/reset";
+@import "../globals/colours";
+@import "../globals/typography";
+@import "../globals/sizes";
+@import "../globals/utils";
+@import "../globals/ctas";
+@import "../globals/forms";
+@import "../globals/cards";
+
+/* Partials */
+@import "../partials/1-hero";
+@import "../partials/2-brands-banner";
+@import "../partials/3-pitch";
+@import "../partials/4-diy-crawling";
+@import "../partials/5-configurations";
+@import "../partials/6-managed-crawling";
+@import "../partials/7-pricing";
+@import "../partials/8-about-us";
+@import "../partials/9-testimonials";
+@import "../partials/10-contact";
+@import "../partials/footer";
+@import "../partials/menu";
+
+
+
+body {
+    font-size: 10px;
+    line-height: 1.2rem;
+    min-width: 300px;
+    border-top: 3px solid $primary-colour;
+
+}
+
+section {
+    padding: 30px 0;
+}
+
+@media screen and (min-width:$medium-width-container ) {
+    .diy-row {
+        display: flex;
+        flex-direction: row;
+        max-width: $large-width-container;
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+

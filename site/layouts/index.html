@@ -1,0 +1,49 @@
+{{ define "title"}}
+  {{ $.Params.title }}
+{{ end }}
+
+{{ define "layoutStyling" }}
+
+  {{ with resources.Get "scss/layouts/_homepage.scss" }}
+  {{ $opts := dict
+    "enableSourceMap" hugo.IsDevelopment
+    "outputStyle" "compressed"
+    "targetPath" "css/main.css"
+    "transpiler" "dartsass"
+  }}
+  {{ with . | toCSS $opts }}
+      {{ with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+{{ end }}
+
+{{ define "docType" }}
+  <meta name="doctype" content="homepage">
+{{ end }}
+
+{{ define "preloadList" }}
+
+{{ end }}
+
+{{ define "main" }}
+    {{ partial "1-hero.html" . }}
+    {{ partial "2-brands-banner.html" . }}
+    {{ partial "3-pitch.html"  . }}
+
+    <div class="diy-row">
+        {{ partial "4-diy-crawling.html"  . }}
+      {{ partial "5-configurations.html"  . }}
+    </div>
+
+    {{ partial "6-managed-crawling.html"  . }}
+    {{ partial "7-pricing.html"  . }}
+    {{/*  {{ partial "8-about-us.html"  . }}  */}}
+    {{/*  {{ partial "9-testimonials.html"  . }}  */}}
+    {{ partial "10-contact.html"  . }}
+    {{ partial "footer.html" . }}
+
+    {{ end }}

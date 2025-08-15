@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+  <meta name="description" content="{{ $.Params.MetaDescription }}">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  {{ block "layoutStyling". }}
+  {{ end }}
+  {{ block "metaRobots". }}
+  {{ end }}
+  {{ block "docType". }}
+  {{ end }}
+  {{ block "preloadList". }}
+  {{ end }}
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+  {{ partial "menu" . }}
+  <div class="root-container">
+    <main class="container">
+
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+
+  </div>
+  {{ partialCached "footer.html" . }}
+
+  <script type="text/javascript" defer="defer" nomodule src="https://polyfill.io/v3/polyfill.min.js?version=3.101.0&features=es2015%2Ces2016%2Ces2017%2Ces5%2Ces6%2Ces2018%2Ces2019%2CElement.prototype.dataset%2CElement.prototype.classList%2Ces7%2CHTMLPictureElement%2CNodeList.prototype.forEach%2CNode.prototype.contains%2CURL"></script>
+
+
+  {{ $main := resources.Get "scripts/main.js" }}
+  {{ $menu := resources.Get "scripts/menu.js" }}
+  {{ $stickyNav := resources.Get "scripts/sticky-nav.js" }}
+
+
+  {{ $js := slice $main $menu $stickyNav | resources.Concat "js/app.js" | resources.Minify | resources.Fingerprint
+  "sha512" }}
+  <script src={{ $js.RelPermalink }} integrity={{$js.Data.Integrity }} defer="defer"></script>
+</body>
+
+</html>

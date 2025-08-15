@@ -1,0 +1,97 @@
+<section class="contact" id="contact">
+
+    <div class="wrapper">
+            <span class="left-desktop"></span>
+            <span class="right-desktop"></span>
+            <span class="mobile"></span>
+            
+        <header class="contact-header">
+            <h2 class="contact-header-text">Release the Krawlers</h2>
+            <div class="contact-header-blurb">
+                Looking to rent a server, or get in contact about us helping you with your crawling requirements, use
+                the form to let us know a bit more about your requirements and one of our team will reach out to you.
+            </div>
+        </header>
+
+        <form action="" class="contact-form">
+
+            <div class="contact-form-box card">
+                <h3 class="contact-form-box-header">
+                    <div class="contact-form-box-header-text">Step 1</div>
+                </h3>
+                <div class="contact-form-box-blurb">
+                    Are you looking to do the work yourself, or would you like us to crawl the site for you?
+                </div>
+
+
+                <div class="toggle" id="toggleRadio">
+                        <div class="col">
+                            <input type="radio" id="yes" class="toggle-radio" checked="true" aria-checked="true" name="choice">
+                            <label for="yes" class="toggle-label selected">Yes Please</label>
+                            
+                        </div>
+                        <div class="col">
+                            <input type="radio" id="no" class="toggle-radio" name="choice">
+                            <label for="no" class="toggle-label">No Thanks</label>
+                            
+                        </div>
+                </div>
+
+
+            </div>
+
+            <div class="contact-form-box card">
+                <h3 class="contact-form-box-header">
+                    <div class="contact-form-box-header-text">Step 2</div>
+                </h3>
+                <div class="contact-form-box-blurb">
+                    Roughly how many pages are your looking to crawl?
+                </div>
+
+                <div class="dropdown" id="dropdown">
+                    <label for="dropdownContainer" class="dropdown-label">Number of pages</label>
+                    <select name="dropdownContainer" id="dropdownContainer" class="dropdown-container" aria-placeholder="test">
+                        <option value="500k" class="dropdown-option" selected>Pages</option>
+                        <option value="500k" class="dropdown-option">500k or less</option>
+                        <option value="2m" class="dropdown-option">2m or less</option>
+                        <option value="5m" class="dropdown-option">5m or less</option>
+                        <option value="10m" class="dropdown-option">10m or less</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="contact-form-box card">
+                <h3 class="contact-form-box-header">
+                    <div class="contact-form-box-header-text">Step 3</div>
+                </h3>
+                <div class="contact-form-box-blurb">
+                    How can we get in contact                
+                </div>
+
+                <div class="form-step">
+                    <fieldset class="fieldset-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+
+                        <label for="email" class="email">Email</label>
+                        <input type="email" name="email" id="email">
+
+                        <label for="message" class="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                        
+                    </fieldset>
+                    <div class="gdpr">
+                        <input type="checkbox" name="gdpr" id="gdpr">
+                        <label type="checkbox" name="gdpr" class="gdpr-label" for="gdpr">GDPR & T&C's Consent</label>
+
+                    </div>
+
+                    <div class="enquire-cta">
+                        <button class="enquire-cta-button cta-primary">Enquire Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>

@@ -1,0 +1,75 @@
+@import "../globals/clash-display";
+@import "../globals/satoshi";
+@import "../globals/colours";
+
+div, p, section, aside, .para {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-family: 'Satoshi-Regular';
+}
+a {
+    all: unset;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+h1, .header-1 {
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+    font-family: 'ClashDisplay-Semibold';
+    letter-spacing: 1.4px;
+}
+h2, .header-2 {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-family: 'ClashDisplay-Semibold';
+    letter-spacing: 1.4px;
+}
+h3, .header-3 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-family: 'ClashDisplay-Semibold';
+    letter-spacing: 1.4px;
+}
+h4, .header-4 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-family: 'ClashDisplay-Semibold';
+    letter-spacing: 1.4px;
+}
+h5, .header-5 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-family: 'ClashDisplay-Semibold';
+    letter-spacing: 1.4px;
+}
+h6, .header-6 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-family: 'ClashDisplay-Semibold';
+    letter-spacing: 1.4px;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-line: 3px;
+    text-decoration-color: $primary-colour;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 5px;
+}
+.underline-grey {
+    text-decoration: underline;
+    text-decoration-line: 3px;
+    text-decoration-color: rgba(204, 204, 204, 1);
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 5px;
+}
+
+.strong {
+    font-weight: 700;
+}
