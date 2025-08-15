@@ -10,13 +10,21 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
+
+        @media screen and (min-width:$medium-width-container ) {
+            justify-content: flex-end;
+        }
 
     }
 
     .block {
         width: 100%;
-        max-width: 600px;
+        max-width: 800px;
+
+        @media screen and (min-width:$medium-width-container ) {
+            max-width: 600px;
+        }
     }
 
     &-picture {

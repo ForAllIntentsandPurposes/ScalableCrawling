@@ -1,5 +1,6 @@
 #toggleRadio {
-    width: fit-content;
+    width: 100%;
+    max-width: 350px;
     display: flex;
     border: 3px solid $secondary-colour;
     flex-direction: row;
@@ -25,7 +26,12 @@
     }
 
     .toggle-label {
+        display: inline-block;
         padding: 10px 30px;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        width: fit-content;
+        text-align: center;
 
         &:hover {
             background: $primary-colour;
