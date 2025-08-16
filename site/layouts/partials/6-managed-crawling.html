@@ -31,7 +31,8 @@
 
 
         <div class="managed-crawling-faq">
-            <div class="managed-crawling-faq-block open">
+
+            <div class="managed-crawling-faq-block">
 
                 <div class="managed-crawling-faq-block-header row">
                     <h3 class="managed-crawling-faq-block-header-text">Will this cost me the Earth</h3>
@@ -44,6 +45,8 @@
                 </div>
 
             </div>
+
+
             <div class="managed-crawling-faq-block">
 
                 <div class="managed-crawling-faq-block-header row">
@@ -76,5 +79,22 @@
 </section>
 
 <script>
+    (function(){
+        const faqHeaders = Array.from(document.querySelectorAll("#difm .managed-crawling-faq-block"));
 
+        faqHeaders.forEach(header => {
+            header.addEventListener("click", (e) => {
+                if(e.target.classList.contains("managed-crawling-faq-block-header") || 
+                e.target.classList.contains("managed-crawling-faq-block-header-text") || 
+                e.target.classList.contains("toggle") || 
+                e.target.classList.contains("toggle-icon-close") || 
+                e.target.classList.contains("toggle-icon-open")){
+
+                    header.classList.toggle("open");
+                    header.querySelector("span.toggle").classList.toggle("open");
+                    console.log("clicked");
+                }
+            },true);
+        });
+    })();
 </script>
