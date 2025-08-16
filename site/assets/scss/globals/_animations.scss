@@ -76,3 +76,25 @@
 		transform: translateX(-250px);
 	}
 }
+ 
+@keyframes heroBackgrounds {
+
+    0% {
+        background-color: $secondary-colour;
+    }
+    25% {
+        background-color: #022449;
+    }
+    50% {
+        background-color: #012d5c;
+    }
+    75% {
+        background-color: #022449;
+    }
+    95% {
+        background-color: $secondary-colour;
+    }
+    100% {
+        background-color: $secondary-colour;
+    }
+}
