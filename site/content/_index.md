@@ -1,6 +1,6 @@
 ---
 title : "Scalable Crawling"
-MetaDescription : "Hello from the homepage"
+MetaDescription : "Hello and welcome from the Scalable Crawling team. Click today to find out how we help brands crawl for less"
 Doctype : "Homepage"
 configurations: 
     -   colour: "Bronze"
