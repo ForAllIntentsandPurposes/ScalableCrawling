@@ -6,6 +6,7 @@
         max-width: $large-width-container;
         margin: 0 auto;
         width: 95%;
+        padding-bottom: 40px ;
     }
 
     &-header {
@@ -41,7 +42,7 @@
                 background-color: white;
 
                 &:hover {
-                    background-color: #{lighten($secondary-colour,30%)};
+                    background-color: #{lighten($primary-colour,30%)};
                     cursor: pointer;
                 }
 
@@ -122,6 +123,11 @@
                 padding: 10px 0;
                 text-align: center;
 
+            }
+
+            &-explainer {
+                width: 100%;
+                padding: 10px 0;
             }
         }
 
