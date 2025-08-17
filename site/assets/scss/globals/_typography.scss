@@ -55,6 +55,7 @@ h6, .header-6 {
 
 .underline {
         display: inline-block;
+        padding-bottom: 5px;
         &::after {
             content: '';
             display: block;
@@ -97,6 +98,7 @@ h6, .header-6 {
             animation-duration: 1s;
             animation-delay: 1s;
             animation-fill-mode: forwards;
+            margin-top: 5px;
         }    
 
 }

@@ -28,11 +28,13 @@
     }
 
     &-picture {
-        width: 100%;
+        width: 80%;
+        max-width: 500px;
+        aspect-ratio: 113/86;
 
         @media screen and (min-width: $medium-width-container) {
             margin-right: auto;
-            max-width: 500px;
+            
         }
 
         &-img {
@@ -90,9 +92,11 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 20px 20px 20px 0;
+                
 
                 &-text {
                     flex-grow: 3;
+                    font-size: 1.4rem;
                 }
             }
 

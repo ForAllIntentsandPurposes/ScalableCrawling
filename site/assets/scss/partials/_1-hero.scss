@@ -3,7 +3,7 @@
     background-color: $secondary-colour;
     animation: heroBackgrounds 8s infinite;
     color: white;
-    padding: 80px 0 40px;
+    padding: 40px 0 60px;
     height: 100%;
     min-height: 340px;
 
@@ -37,6 +37,7 @@
         &-text {
             font-size: 1.8rem;
             line-height: 2.5rem;
+            padding-bottom: 20px;
             
 
             .dropdown-header {
@@ -68,9 +69,11 @@
     }
 
     .blurb {
+        margin-bottom: 40px;
+
         @media screen and (min-width:$medium-width-container ) {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 40px;
 
             &-text {
                 text-align: center;
@@ -82,7 +85,6 @@
             font-size: 1.2rem;
             line-height: 1.6rem;
             font-weight: 400;
-            max-width: 70%;
 
             @media screen and (min-width:$medium-width-container ) {
                 text-align: center;
@@ -94,6 +96,6 @@
     }
 
     .mp-request-a-box {
-        margin-top: 20px;
+        
     }
 }

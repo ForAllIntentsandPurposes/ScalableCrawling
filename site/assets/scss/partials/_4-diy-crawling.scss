@@ -9,15 +9,19 @@
 
     &-header {
         padding: 20px 0;
+        font-size: 2rem;
 
         &-text {
-
+            text-transform: uppercase;
+            font-size: 1.2rem;
         }
 
     }
 
     &-standfirst {
-
+        font-weight: 700;
+        color: $secondary-colour;
+        letter-spacing: 2px;
     }
 
     &-card {
@@ -41,6 +45,7 @@
 
         &-text {
             width: 100%;
+            color: $secondary-colour;
         }
 
     }

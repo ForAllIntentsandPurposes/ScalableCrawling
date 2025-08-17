@@ -1,12 +1,16 @@
 .configurations {
+    padding-top: unset;
 
     @media screen and (min-width:$medium-width-container ) {
         width: 40%;
     }
 
     &-header {
+
         &-text {
             text-align: center;
+            color: $secondary-colour;
+            font-size: 1.6rem;
 
         }
     }
@@ -114,16 +118,16 @@
     .line {
         display: flex;
         justify-content: space-between;
-        padding: 15px 0;
+        padding: 5px 0;
 
         .property {
             font-size: 1.1rem;
-            line-height: 1.4rem;
+            line-height: 1.2rem;
             width: 70%;
         }
         .value {
             font-size: 1.1rem;
-            line-height: 1.4rem;
+            line-height: 1.2rem;
             width: 30%;
             text-align: center;
         }
