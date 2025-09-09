@@ -34,6 +34,7 @@
         padding: 40px 20px;
         margin-right: 30px;
         background-color: white;
+        height: fit-content;
 
         &:hover {
             transform: scale(1.05);
@@ -44,17 +45,21 @@
             overflow: hidden;
             &:nth-child(1){
                z-index: 10; 
-               border-right: 6px solid $rich-black;
+               border-right: 6px solid $rich-black;               
+               
             }
             &:nth-child(2){
                 z-index: 5; 
                 transform: translateX(-270px);
                 border-right: 6px solid $secondary-colour;
+                
+                
             }
             &:nth-child(3){
                 z-index: 1; 
                 transform: translateX(-540px);
                 border-right: 6px solid #033468;
+                
             }
         }
 

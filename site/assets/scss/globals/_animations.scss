@@ -98,3 +98,22 @@
         background-color: $secondary-colour;
     }
 }
+
+@keyframes nextCard {
+
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+    z-index: 11;
+  }
+
+}
+
+.animate-next-card {
+  animation: nextCard 2s ease-out;
+}

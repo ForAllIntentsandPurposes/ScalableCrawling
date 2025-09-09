@@ -51,7 +51,7 @@
     );
 
     let articles =
-        document.querySelectorAll("body > main > article");
+        document.querySelectorAll("body > main > section");
 
     articles.forEach((el) => {
         iObs.observe(el);
