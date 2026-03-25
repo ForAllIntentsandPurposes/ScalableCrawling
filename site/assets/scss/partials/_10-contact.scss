@@ -68,3 +68,107 @@
             margin-top: 20px;
         }
 }
+
+/* Onboarding should reuse the contact layout (forms/spacing) without the grey background. */
+section#onboarding.contact {
+    background-color: #001d3d;
+}
+
+/* Onboarding shows a single plan "card"; remove desktop right-margin meant for multi-card layouts. */
+section#onboarding.contact #plan-specs .pricing-cards {
+    margin-right: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    margin-bottom: 0 !important;
+}
+
+/* Onboarding uses a custom layout (grid header+plan, then full-width form). */
+section#onboarding.contact .wrapper {
+    display: block !important;
+}
+
+/* Onboarding layout: header top-left, plan top-right, form full width below. */
+section#onboarding.contact .onboarding-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Above-the-fold header + selected plan specs on dark background */
+section#onboarding.contact .contact-header-text,
+section#onboarding.contact .contact-header-blurb {
+    color: $white;
+}
+
+section#onboarding.contact .contact-header-blurb .tx-primary {
+    color: $primary-colour;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards {
+    color: $white;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards-header-text {
+    border-bottom: none !important;
+    color: $white;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards-costs-row-price {
+    color: $primary-colour;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards-costs-row-cadence {
+    color: $white;
+}
+
+/* Make plan header + price sit on the same line */
+section#onboarding.contact #plan-specs .pricing-cards-header-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards-costs-row-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 16px;
+    padding-top: 0 !important;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards-costs-row-inline .pricing-cards-costs-row-price {
+    padding-top: 0 !important;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards-scorecard-property {
+    color: $white;
+}
+
+section#onboarding.contact #plan-specs .pricing-cards-scorecard-value {
+    color: $primary-colour;
+}
+
+@media screen and (min-width: $large-width-container) {
+    section#onboarding.contact .onboarding-top {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    /* Contact section styles make the header sticky + limited width; we don't want that here. */
+    section#onboarding.contact .onboarding-header {
+        position: static !important;
+        width: auto !important;
+        max-width: unset !important;
+        margin-right: 0 !important;
+    }
+
+    /* Form should span full width below the top row. */
+    section#onboarding.contact #onboarding-form.contact-form {
+        width: 100% !important;
+    }
+}

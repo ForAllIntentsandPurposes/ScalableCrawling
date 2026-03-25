@@ -1,0 +1,205 @@
+{{ define "title"}}
+  {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "layoutStyling" }}
+  {{ with resources.Get "scss/layouts/_homepage.scss" }}
+  {{ $opts := dict
+    "enableSourceMap" hugo.IsDevelopment
+    "outputStyle" "compressed"
+    "targetPath" "css/main.css"
+    "transpiler" "dartsass"
+  }}
+  {{ with . | toCSS $opts }}
+      {{ with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+  {{ end }}
+{{ end }}
+{{ end }}
+
+{{ define "docType" }}
+  <meta name="doctype" content="onboarding">
+{{ end }}
+
+{{ define "main" }}
+{{ partial "menu.html" . }}
+
+<section class="contact" id="onboarding">
+  <div class="wrapper">
+            <span class="left-desktop"></span>
+            <span class="right-desktop"></span>
+            <span class="mobile"></span>
+
+    <div class="onboarding-top">
+      <header class="contact-header onboarding-header">
+        <h2 class="contact-header-text">Complete Your Setup</h2>
+        <div class="contact-header-blurb">
+          Thanks for your purchase. Please complete the form below so we can set up your crawling service. <span class="tx-primary">Use the same email address you used during checkout.</span>
+        </div>
+      </header>
+
+      <div class="onboarding-plan">
+        <div id="plan-specs" class="hide">
+          <div class="pricing-deck">
+            <article class="pricing-cards plan-specs-standard hide" data-plan="standard">
+              <header class="pricing-cards-header pricing-cards-header-inline">
+                <h3 class="pricing-cards-header-text">Standard</h3>
+
+                <div class="pricing-cards-costs-row pricing-cards-costs-row-inline">
+                  <div class="pricing-cards-costs-row-price">£160</div>
+                  <div class="pricing-cards-costs-row-cadence">PCM (ex VAT)</div>
+                </div>
+              </header>
+
+              <div class="pricing-cards-scorecard">
+                <div class="pricing-cards-scorecard-property">Memory</div>
+                <div class="pricing-cards-scorecard-value">32GB</div>
+                <div class="pricing-cards-scorecard-property">Cores</div>
+                <div class="pricing-cards-scorecard-value">6</div>
+                <div class="pricing-cards-scorecard-property">Storage</div>
+                <div class="pricing-cards-scorecard-value">200GB</div>
+                <div class="pricing-cards-scorecard-property">Cloud Storage</div>
+                <div class="pricing-cards-scorecard-value">1TB</div>
+              </div>
+            </article>
+
+            <article class="pricing-cards plan-specs-multi-site hide" data-plan="multi-site">
+              <header class="pricing-cards-header pricing-cards-header-inline">
+                <h3 class="pricing-cards-header-text">Multi-Site</h3>
+
+                <div class="pricing-cards-costs-row pricing-cards-costs-row-inline">
+                  <div class="pricing-cards-costs-row-price">£250</div>
+                  <div class="pricing-cards-costs-row-cadence">PCM (ex VAT)</div>
+                </div>
+              </header>
+
+              <div class="pricing-cards-scorecard">
+                <div class="pricing-cards-scorecard-property">Memory</div>
+                <div class="pricing-cards-scorecard-value">64GB</div>
+                <div class="pricing-cards-scorecard-property">Cores</div>
+                <div class="pricing-cards-scorecard-value">8</div>
+                <div class="pricing-cards-scorecard-property">Storage</div>
+                <div class="pricing-cards-scorecard-value">200GB</div>
+                <div class="pricing-cards-scorecard-property">Cloud Storage</div>
+                <div class="pricing-cards-scorecard-value">1TB</div>
+              </div>
+            </article>
+
+            <article class="pricing-cards plan-specs-agency hide" data-plan="agency">
+              <header class="pricing-cards-header pricing-cards-header-inline">
+                <h3 class="pricing-cards-header-text">Agency</h3>
+
+                <div class="pricing-cards-costs-row pricing-cards-costs-row-inline">
+                  <div class="pricing-cards-costs-row-price">£375</div>
+                  <div class="pricing-cards-costs-row-cadence">PCM (ex VAT)</div>
+                </div>
+              </header>
+
+              <div class="pricing-cards-scorecard">
+                <div class="pricing-cards-scorecard-property">Memory</div>
+                <div class="pricing-cards-scorecard-value">128GB</div>
+                <div class="pricing-cards-scorecard-property">Cores</div>
+                <div class="pricing-cards-scorecard-value">12</div>
+                <div class="pricing-cards-scorecard-property">Storage</div>
+                <div class="pricing-cards-scorecard-value">200GB</div>
+                <div class="pricing-cards-scorecard-property">Cloud Storage</div>
+                <div class="pricing-cards-scorecard-value">1TB</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="onboarding-success" class="contact-form-box card hide">
+      <div class="contact-form-box-blurb">
+        Thanks — we’ll review your details and get started shortly.
+      </div>
+    </div>
+
+    <form
+      id="onboarding-form"
+      class="contact-form"
+      name="onboarding"
+      method="POST"
+      action="/onboarding?success=true"
+      data-netlify="true"
+    >
+      <input type="hidden" name="form-name" value="onboarding">
+      <input type="hidden" name="plan" id="plan-field" value="">
+
+      <div class="contact-form-box card">
+        <h3 class="contact-form-box-header">
+          <div class="contact-form-box-header-text">Setup Details</div>
+        </h3>
+
+        <div class="form-step">
+          <fieldset class="fieldset-group">
+            <label for="email">Payment Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="name">Name / Company</label>
+            <input type="text" name="name" id="name">
+
+            <label for="provisioning_email">Provisioning Email (if different)</label>
+            <input type="email" name="provisioning_email" id="provisioning_email">
+
+            <label for="notes">Notes / Requirements</label>
+            <textarea name="notes" id="notes"></textarea>
+          </fieldset>
+
+          <div class="enquire-cta">
+            <button type="submit" class="enquire-cta-button cta-primary">Submit Setup Details</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var plan = params.get("plan");
+    var isSuccess = params.get("success") === "true";
+
+    var successBox = document.getElementById("onboarding-success");
+    var form = document.getElementById("onboarding-form");
+    var planSpecsContainer = document.getElementById("plan-specs");
+    var planField = document.getElementById("plan-field");
+
+    if (isSuccess) {
+      successBox.classList.remove("hide");
+      form.classList.add("hide");
+    }
+
+    if (plan) {
+      // Capture query-string plan silently and use it to toggle plan-specific specs.
+      // Expected values: "standard", "multi-site", "agency" (optionally "managed-services").
+      var canonical = plan.trim().toLowerCase().replace(/_/g, "-");
+      planField.value = canonical;
+
+      // Hide all plan cards, then show the matching one.
+      var allCards = document.querySelectorAll("#plan-specs [data-plan]");
+      allCards.forEach(function (el) {
+        el.classList.add("hide");
+      });
+
+      var matchingCards = document.querySelectorAll('#plan-specs [data-plan="' + canonical + '"]');
+      matchingCards.forEach(function (el) {
+        el.classList.remove("hide");
+      });
+
+      // Only unhide the container if we actually have a matching plan.
+      if (matchingCards.length > 0) {
+        planSpecsContainer.classList.remove("hide");
+      } else {
+        planSpecsContainer.classList.add("hide");
+      }
+    }
+  })();
+</script>
+{{ end }}
