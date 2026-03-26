@@ -1,0 +1,56 @@
+{{ define "title"}}
+  {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "layoutStyling" }}
+  {{ with resources.Get "scss/layouts/_homepage.scss" }}
+  {{ $opts := dict
+    "enableSourceMap" hugo.IsDevelopment
+    "outputStyle" "compressed"
+    "targetPath" "css/main.css"
+    "transpiler" "dartsass"
+  }}
+  {{ with . | toCSS $opts }}
+      {{ with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+  {{ end }}
+{{ end }}
+{{ end }}
+
+{{ define "docType" }}
+  <meta name="doctype" content="blog-list">
+{{ end }}
+
+{{ define "main" }}
+{{ partial "menu.html" . }}
+
+<section class="blog" id="blog">
+  <div class="wrapper">
+    <header class="blog-header">
+      <h1 class="blog-header-text">{{ .Title }}</h1>
+      <p class="blog-header-blurb">Technical write-ups, case studies, and crawling best practices.</p>
+    </header>
+
+    <div class="blog-list">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="blog-list-item card">
+          <h2 class="blog-list-item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <div class="blog-list-item-meta">
+            <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "02 Jan 2006" }}</time>
+            {{ with .Params.author }}<span> · {{ . }}</span>{{ end }}
+          </div>
+          {{ with .Params.MetaDescription }}
+            <p class="blog-list-item-summary">{{ . }}</p>
+          {{ else }}
+            <p class="blog-list-item-summary">{{ .Summary }}</p>
+          {{ end }}
+          <a class="blog-list-item-link tx-primary" href="{{ .RelPermalink }}">Read article</a>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ end }}

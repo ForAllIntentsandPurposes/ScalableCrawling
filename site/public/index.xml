@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO Crawler | Scalable Crawling on Scalable Crawling</title><link>/</link><description>Recent content in SEO Crawler | Scalable Crawling on Scalable Crawling</description><generator>Hugo</generator><language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Complete Your Setup</title><link>/onboarding/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/onboarding/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SEO Crawler | Scalable Crawling on Scalable Crawling</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in SEO Crawler | Scalable Crawling on Scalable Crawling</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Connected</title>
+      <link>//localhost:1313/blog/getting-connected/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/getting-connected/</guid>
+      <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;&#xA;&lt;p&gt;To connect to your crawling server, you need:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;The server IP address (or hostname)&lt;/li&gt;&#xA;&lt;li&gt;Your username and password&lt;/li&gt;&#xA;&lt;li&gt;A remote desktop client installed on your machine&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Most users on Windows can use &lt;strong&gt;Microsoft Remote Desktop&lt;/strong&gt;.&lt;br&gt;&#xA;Mac users can use &lt;strong&gt;Microsoft Remote Desktop&lt;/strong&gt; or &lt;strong&gt;Jump Desktop&lt;/strong&gt;.&lt;br&gt;&#xA;Linux users can use &lt;strong&gt;Remmina&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;remote-desktop-client-options&#34;&gt;Remote Desktop Client Options&lt;/h2&gt;&#xA;&lt;p&gt;Here are common options by platform:&lt;/p&gt;&#xA;&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Remote Desktop Connection&lt;/strong&gt; (built-in on most Pro/Enterprise installs)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Microsoft Remote Desktop&lt;/strong&gt; (Store app)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;AnyDesk&lt;/strong&gt; (alternative workflow)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;macos&#34;&gt;macOS&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Microsoft Remote Desktop&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Jump Desktop&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;AnyDesk&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Remmina&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;KRDC&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;AnyDesk&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;basic-connection-steps&#34;&gt;Basic Connection Steps&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Open your chosen remote desktop app.&lt;/li&gt;&#xA;&lt;li&gt;Enter the server IP or hostname.&lt;/li&gt;&#xA;&lt;li&gt;Enter your username and password when prompted.&lt;/li&gt;&#xA;&lt;li&gt;Accept any first-time certificate/security prompt.&lt;/li&gt;&#xA;&lt;li&gt;Save the profile/connection for future sessions.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;troubleshooting-quick-checks&#34;&gt;Troubleshooting (Quick Checks)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cannot reach server&lt;/strong&gt;: verify IP/hostname and that your network/firewall allows outbound RDP.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Credentials rejected&lt;/strong&gt;: confirm username format and reset password if needed.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Connection drops/lag&lt;/strong&gt;: reduce display resolution and disable heavy visual effects in the client.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Still blocked&lt;/strong&gt;: send us your error screenshot and the timestamp of your login attempt.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started With Scalable Crawling</title>
+      <link>//localhost:1313/blog/getting-started/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/getting-started/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;&#xA;&lt;p&gt;Use this draft post as a starting point for your article workflow.&lt;/p&gt;&#xA;&lt;h2 id=&#34;main-section&#34;&gt;Main Section&lt;/h2&gt;&#xA;&lt;p&gt;Add your long-form content here. Markdown headings, lists, code blocks, and links are all supported.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-takeaways&#34;&gt;Key Takeaways&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Point one&lt;/li&gt;&#xA;&lt;li&gt;Point two&lt;/li&gt;&#xA;&lt;li&gt;Point three&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Complete Your Setup</title>
+      <link>//localhost:1313/onboarding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/onboarding/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

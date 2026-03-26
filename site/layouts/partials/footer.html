@@ -4,11 +4,13 @@
         <div class="row">
             <div class="col">
                 <div class="footer-logo">
-                    <picture>
-                        <source media="(max-width:1000px )" srcset="/images/mobile-logo.svg">
-                        <source media="(min-width:1000px )" srcset="/images/desktop-logo.svg">
-                        <img src="/images/mobile-logo.svg" alt="" class="footer-logo-img">
-                    </picture>
+                    <a href="/" aria-label="Go to homepage">
+                        <picture>
+                            <source media="(max-width:1000px )" srcset="/images/mobile-logo.svg">
+                            <source media="(min-width:1000px )" srcset="/images/desktop-logo.svg">
+                            <img src="/images/mobile-logo.svg" alt="Scalable Crawling logo" class="footer-logo-img">
+                        </picture>
+                    </a>
                 </div>
 
                 <div class="footer-blurb">
@@ -46,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="copyright">© 2025 Scalable Crawling</div>
+                <div class="copyright">© {{ now.Year }} Scalable Crawling</div>
             </div>
         </div>
 
